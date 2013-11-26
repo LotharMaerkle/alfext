@@ -25,6 +25,7 @@ Todos and whishlist
 * DEVELOPMENT: Add the import(...) feature for JavaScript imports. This has the huge benefit over the Alfresco style imports
 done with <import ...> by not breaking syntax correctness of JavaScript. Further line numbers in error messages
 point to the correct line and will make debugging a lot easier, which is not the case with the Alfresco style imports.
+Provided by AFaust at https://github.com/AFaust/alfresco-enhanced-script-environment
 
 * DEPLOYMENT: Remove the hidden tracking pixel. It should be clear to users what kind of data is transmitted.
 
