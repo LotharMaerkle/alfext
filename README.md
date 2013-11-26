@@ -9,7 +9,7 @@ users of Alresco providing a pre packaged installable module.
 Installation and configuration
 ==============================
 
-See the corresponding wiki page here [wiki/Installation_and_configuration]
+See the corresponding wiki page here [https://github.com/LotharMaerkle/alfext/wiki/Installation-and-configuration]
 
 Done
 ====
