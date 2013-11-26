@@ -6,18 +6,23 @@ The intention is to collect useful work done by the community and make the code 
 users of Alresco providing a pre packaged installable module.
 
 
-DONE
+Installation and configuration
+==============================
+
+See the corresponding wiki page here [wiki/Installation_and_configuration]
+
+Done
 ====
 
-* DEPLOYMENTL: Sharepoint protocol (SPP): simpler deployment for SPP
+* DEPLOYMENT: Sharepoint protocol (SPP): simpler deployment for SPP
 Provides a custom jetty connector to allow proper protocol (http or https) delegation from a fronting reverse
 proxy via the header X-Forwared-Proto. This removes the requirement to do complicated jetty SSL configuration.
 
 
-TODOS
-=====
+Todos and whishlist
+===================
 
-* CODING: Add the import(...) feature for JavaScript imports. This has the huge benefit over the Alfresco style imports
+* DEVELOPMENT: Add the import(...) feature for JavaScript imports. This has the huge benefit over the Alfresco style imports
 done with <import ...> by not breaking syntax correctness of JavaScript. Further line numbers in error messages
 point to the correct line and will make debugging a lot easier, which is not the case with the Alfresco style imports.
 
