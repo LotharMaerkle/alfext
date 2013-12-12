@@ -11,12 +11,20 @@ Installation and configuration
 
 See the corresponding wiki page here [https://github.com/LotharMaerkle/alfext/wiki/Installation-and-configuration]
 
+Building from source
+====================
+
+See the wiki page which describes how the module is build from source [https://github.com/LotharMaerkle/alfext/wiki/Building-from-source]
+
 Done
 ====
+
+* FIX: Internet Explorer 11: Allows to login to Share with IE 11 to 4.2cCE/4.2eCE
 
 * DEPLOYMENT: Sharepoint protocol (SPP): simpler deployment for SPP
 Provides a custom jetty connector to allow proper protocol (http or https) delegation from a fronting reverse
 proxy via the header X-Forwared-Proto. This removes the requirement to do complicated jetty SSL configuration.
+
 
 
 Todos and whishlist
