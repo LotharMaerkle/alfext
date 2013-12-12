@@ -11,7 +11,7 @@ TMPDIR=tmp$$
 mkdir $TMPDIR
 (
 cd $TMPDIR
-unzip ../alfext-repo.amp
+unzip ../alfext_repo.amp
 (
 cd lib
 ls |grep -v alfext |xargs rm

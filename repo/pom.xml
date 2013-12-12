@@ -3,7 +3,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>alfext</groupId>
-    <artifactId>alfext-repo</artifactId>
+    <artifactId>alfext_repo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>alfext AMP project</name>
     <packaging>amp</packaging>
