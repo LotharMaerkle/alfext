@@ -5,19 +5,20 @@ Collection of useful fixes, patches and extensions for Alfresco packaged as an i
 The intention is to collect useful work done by the community and make the code easier availabe for
 users of Alresco providing a pre packaged installable module.
 
+Building from source
+====================
+
+See the wiki page which describes how the module is build from source [https://github.com/LotharMaerkle/alfext/wiki/Building-from-source]
 
 Installation and configuration
 ==============================
 
 See the corresponding wiki page here [https://github.com/LotharMaerkle/alfext/wiki/Installation-and-configuration]
 
-Building from source
-====================
-
-See the wiki page which describes how the module is build from source [https://github.com/LotharMaerkle/alfext/wiki/Building-from-source]
-
 Done
 ====
+
+* FIX: Internet Explorer 11: Support SharePoint Online Edit with IE11 for 4.2eCE
 
 * FIX: Internet Explorer 11: Allows to login to Share with IE 11 to 4.2cCE/4.2eCE
 
