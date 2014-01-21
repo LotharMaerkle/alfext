@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension>
+	<modules>
+		<module>
+			<id>alfext share extension</id>
+			<auto-deploy>true</auto-deploy>
+			<!-- Enhance individual WebScripts when their paths match -->
+			<customizations>
+				<customization>
+					<targetPackageRoot>org.alfresco</targetPackageRoot>
+					<sourcePackageRoot>alfext.customizations
+					</sourcePackageRoot>
+				</customization>
+			</customizations>
+		</module>
+	</modules>
+</extension>

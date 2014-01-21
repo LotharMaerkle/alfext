@@ -1,0 +1,7 @@
+<webscript>
+   <shortname>JavaScript alfext</shortname>
+   <url>/alfext/jsext</url>
+   <family>alfext</family>
+   <format default=""></format>
+   <authentication>none</authentication>
+</webscript>
