@@ -1,10 +1,10 @@
 (function() {
     // patch yui to support IE 11 UA detection
     /**
-    * patch ie11 UA detection for yui2
-    * https://github.com/jenkinsci/jenkins/commit/980de3601c66d1ca1807bca98efd8ddc7827b843
-    *
-    */
+     * patch ie11 UA detection for yui2
+     * https://github.com/jenkinsci/jenkins/commit/980de3601c66d1ca1807bca98efd8ddc7827b843
+     * 
+     */
     /**
      * parses a user agent string (or looks for one in navigator to parse if not
      * supplied).
@@ -284,8 +284,9 @@
             }
 
             if (!o.webkit) { // not webkit
-            // @todo check Opera/8.01 (J2ME/MIDP; Opera Mini/2.0.4509/1316; fi;
-            // U; ssr)
+                // @todo check Opera/8.01 (J2ME/MIDP; Opera Mini/2.0.4509/1316;
+                // fi;
+                // U; ssr)
                 m = ua.match(/Opera[\s\/]([^\s]*)/);
                 if (m && m[1]) {
                     o.opera = numberify(m[1]);
@@ -319,10 +320,45 @@
     };
 
     YAHOO.env.ua = YAHOO.env.parseUA();
-
-    // AC_OE fix flash previewer detection with IE11
-    // file js/flash/AC_OETags-min.js defined the global isIE
-
-    isIE = YAHOO.env.ua.ie > 0 ? true : false;
-
 })();
+
+// patched from file js/flash/AC_OETags-min.js
+
+// AC_OE fix flash previewer detection with IE11
+// file js/flash/AC_OETags-min.js defined the global isIE
+
+isIE = YAHOO.env.ua.ie > 0 ? true : false;
+
+function DetectFlashVer(reqMajorVer, reqMinorVer, reqRevision) {
+    versionStr = GetSwfVer();
+    if (versionStr == -1) {
+        return false;
+    } else if (versionStr != 0) {
+        // patch: isWin is true for ie11 but versionStr does not contain WIN...
+        if (isIE && versionStr.match(/.*\s+.*/) && !isOpera) {
+            // Given "WIN 2,0,0,11"
+            tempArray = versionStr.split(" "); // ["WIN", "2,0,0,11"]
+            tempString = tempArray[1]; // "2,0,0,11"
+            versionArray = tempString.split(","); // ['2', '0', '0', '11']
+        } else {
+            versionArray = versionStr.split(".");
+        }
+        var versionMajor = versionArray[0];
+        var versionMinor = versionArray[1];
+        var versionRevision = versionArray[2];
+
+        // is the major.revision >= requested major.revision AND the minor
+        // version >= requested minor
+        if (versionMajor > parseFloat(reqMajorVer)) {
+            return true;
+        } else if (versionMajor == parseFloat(reqMajorVer)) {
+            if (versionMinor > parseFloat(reqMinorVer))
+                return true;
+            else if (versionMinor == parseFloat(reqMinorVer)) {
+                if (versionRevision >= parseFloat(reqRevision))
+                    return true;
+            }
+        }
+        return false;
+    }
+}

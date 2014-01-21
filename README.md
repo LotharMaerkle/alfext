@@ -20,7 +20,9 @@ Done
 
 * FIX: Internet Explorer 11: Support SharePoint Online Edit with IE11 for 4.2eCE
 
-* FIX: Internet Explorer 11: Allows to login to Share with IE 11 to 4.2cCE/4.2eCE
+* FIX: Internet Explorer 11: IE11 Support for Flash Previewer detection
+
+* FIX: Internet Explorer 11: Allows to login to Share with IE11 to 4.2cCE/4.2eCE
 
 * DEPLOYMENT: Sharepoint protocol (SPP): simpler deployment for SPP
 Provides a custom jetty connector to allow proper protocol (http or https) delegation from a fronting reverse

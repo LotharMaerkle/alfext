@@ -11,12 +11,12 @@ TMPDIR=tmp$$
 mkdir $TMPDIR
 (
 cd $TMPDIR
-unzip ../alfext_share.amp
+unzip ../alfext-share.amp
 (
 cd lib
 ls |grep -v alfext |xargs rm
 )
-zip -r ../alfext_share-nodeps.amp .
+zip -r ../alfext-share-nodeps.amp .
 )
 
 rm -rf $TMPDIR
